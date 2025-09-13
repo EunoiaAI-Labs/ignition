@@ -47,3 +47,8 @@ function securetensor(...args) {
     console.error("Ignition.js: SecureTensor has failed, check other errors somewhere in your logs");
   }
 }
+function params(temp) {
+  if (x === undefined) {
+    x = temp;
+  }
+}
