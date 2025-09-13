@@ -1,4 +1,5 @@
 const iframe = document.getElementById('sandbox');
+import sentenceIntent from 'https://cdn.jsdelivr.net/npm/sentence-intent@0.0.4/+esm'
 function topk(arr, k) {
     arr.sort((a, b) => b - a);
     return arr.slice(0, k);
@@ -58,4 +59,9 @@ function train(file) {
     console.log(evt.target.result);
   };
   reader.readAsText(file);
+}
+function intent(sentence) {
+    const intents = new sentenceIntent(sentence);
+    console.log('intent: ' + intents.getIntent());
+    console.log('context: ' + intents.getContext());
 }
