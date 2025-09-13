@@ -51,3 +51,11 @@ function params(temp) {
     x = temp;
   }
 }
+function train(file) {
+    new FileReader()
+      const reader = new FileReader();
+  reader.onload = (evt) => {
+    console.log(evt.target.result);
+  };
+  reader.readAsText(file);
+}
