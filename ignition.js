@@ -1,4 +1,3 @@
-import sandbox from 'https://cdn.jsdelivr.net/npm/sandbox@0.8.6/+esm'
 const iframe = document.getElementById('sandbox');
 function topk(arr, k) {
     arr.sort((a, b) => b - a);
