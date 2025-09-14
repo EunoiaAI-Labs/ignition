@@ -1,5 +1,7 @@
 const iframe = document.getElementById('sandbox');
 import sentenceIntent from 'https://cdn.jsdelivr.net/npm/sentence-intent@0.0.4/+esm'
+const { minimatch } = require('minimatch')
+var pattern = require("matches").pattern;
 function topk(arr, k) {
     arr.sort((a, b) => b - a);
     return arr.slice(0, k);
@@ -64,4 +66,7 @@ function intent(sentence) {
     const intents = new sentenceIntent(sentence);
     console.log('intent: ' + intents.getIntent());
     console.log('context: ' + intents.getContext());
+}
+function pattern(first, second) {
+    minimatch(first, second)
 }
